@@ -8,6 +8,14 @@
     <link rel = "stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/animate.css">
+    <style>
+            .cls-1 {
+              fill: #fff;
+              stroke: #1d1d1b;
+              stroke-miterlimit: 10;
+              transition: 1s;
+            }
+          </style>
 </head>
 <body>
     <!-- Titelbild | My Chemical Romance Vodergrundlogo und backimg im Stylesheet-->
@@ -53,14 +61,46 @@
                  Matt Pelissier in Newark, New Jersey, soon after the September 
                  11 attacks. Witnessing the World Trade Center towers fall influenced
                   Way's life to the extent that he decided to start a band.</p>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <button id="button">click me</button>
             </div>
 
         </div>
 
 
     </div>
+    <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1416.67 1329.33">
+        <path class="cls-1" d="M131.78,447.35s-54.35-217.39,0-213,139.13,76.09,139.13,76.09,50-108.69,121.74-100,158.7,152.18,158.7,152.18L751.35,230,827.43,401.7,662.22,580l373.91-367.39,89.13,15.21S844.83,319.09,940.48,401.7s180.43,82.6,180.43,82.6l171.74-369.56-41.3,352.17,97.82-128.26,173.92,182.61s-515.22,489.13-617.39,506.52-287,413.05-287,413.05" transform="translate(-107.13 -111.7)"/>
+      </svg>
+    
+      
 
+<script> 
+var path = document.querySelector(' .cls-1');
 
+path.style.strokeDasharray =  path.getTotalLength();
+path.style.strokeDashoffset =  path.getTotalLength();
+
+var button = document.querySelector('#button');
+var toggler = true;
+button.addEventListener('click', function(){
+    if(toggler){
+        path.style.strokeDashoffset = 0;
+    }else {
+        path.style.strokeDashoffset = path.getTotalLength();
+    }
+    toggler = !toggler;
+});
+
+</script>
     <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/init.js"></script>
